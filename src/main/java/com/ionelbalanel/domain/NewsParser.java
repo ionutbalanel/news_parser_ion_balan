@@ -69,7 +69,7 @@ public class NewsParser {
         for (Article article : newsData.articles) {
             if (article.keywords != null){
                 for (String keyword : article.keywords) {
-                    if (keyword.contains(searchQuery)) {
+                    if (keyword.equalsIgnoreCase(searchQuery)) {
                         results.add(article);
                         break;
                     }
